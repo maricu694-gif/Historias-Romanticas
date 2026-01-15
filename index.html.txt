@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historias Románticas & Fragmentos de Vida</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0e1325;
+      --bg-card: #161c3b;
+      --text-main: #e6e8f0;
+      --text-muted: #aeb4d6;
+      --accent: #6c7cff;
+      --accent-soft: #9aa4ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      background: radial-gradient(circle at top, #1c2352, var(--bg-main));
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      padding: 1rem;
+      background: rgba(14,19,37,0.85);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--accent-soft);
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: var(--accent-soft);
+    }
+
+    .post {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .post h3 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 0;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .actions {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    button {
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 0.5rem 1.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    button:hover {
+      background: var(--accent-soft);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background: #0a0f1f;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .quote {
+      font-style: italic;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Historias Románticas & Fragmentos de Vida</h1>
+    <p>Historias para sentir, refugiarse y acompañar el camino de un escritor en construcción.</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#historias">Historias</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+      <p>
+        Este espacio nace como un refugio narrativo. Aquí habitan historias románticas,
+        novelas y fragmentos escritos para acompañar, aliviar y conectar.
+      </p>
+      <p class="quote" id="quote"></p>
+    </section>
+
+    <section id="historias">
+      <h2>Historias recientes</h2>
+
+      <div class="post">
+        <h3>Cuando el tiempo nos alcanzó</h3>
+        <div class="meta">📅 2026 · 💕 Historia romántica · ✍️ H.R Morales</div>
+        <p>
+          A veces el amor no llega tarde, llega cuando ya hemos cambiado.
+          Esta es una historia sobre encuentros, cicatrices y segundas miradas.
+        </p>
+        <div class="actions">
+          <button onclick="likePost(this)">❤️ Me gusta</button>
+          <span class="views">👀 <span class="count">0</span></span>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <p>
+        Novelas en desarrollo, ideas narrativas y futuros guiones forman parte de este
+        espacio en constante construcción.
+      </p>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre mí</h2>
+      <p>
+        Escribo historias que buscan acompañar. Estoy en un proceso de crecimiento como
+        escritor, con la mirada puesta en el guionismo y la narrativa audiovisual.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Puedes escribirme a: <strong>contacto@email.com</strong>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 · H.R Morales · Historias Románticas & Fragmentos de Vida
+  </footer>
+
+  <script>
+    const quotes = [
+      "A veces escribir es la única forma de quedarse.",
+      "No todas las historias buscan un final feliz, algunas buscan ser comprendidas.",
+      "Del amor quedan cicatrices, y de ellas aprendemos a no perdernos.",
+      "Escribir también es una forma de volver."
+    ];
+
+    document.getElementById('quote').textContent = quotes[Math.floor(Math.random() * quotes.length)];
+
+    function likePost(button) {
+      button.textContent = '💜 Gracias por leer';
+      button.disabled = true;
+      const countSpan = button.parentElement.querySelector('.count');
+      countSpan.textContent = parseInt(countSpan.textContent) + 1;
+    }
+  </script>
+
+</body>
+</html>
